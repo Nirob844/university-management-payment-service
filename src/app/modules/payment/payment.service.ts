@@ -15,13 +15,13 @@ const initPayment = async (data: any) => {
     cus_phone: data.phone,
   });
 
-  //   await prisma.payment.create({
-  //     data: {
-  //       amount: data.amount,
-  //       transactionId: data.transactionId,
-  //       studentId: data.studentId,
-  //     },
-  //   });
+  await prisma.payment.create({
+    data: {
+      amount: data.amount,
+      transactionId: data.transactionId,
+      studentId: data.studentId,
+    },
+  });
   return paymentSession.redirectGatewayURL;
   //   try {
   //     const data = {
